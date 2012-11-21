@@ -12,6 +12,22 @@ get_header() ?>
 			<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<div class="hero-unit">
+					<?php 
+					// Check if thumbnail exists
+                    if ( has_post_thumbnail() ) { 
+						
+						// Then, check if mobile - if so, send smaller featured image
+						if ( wp_is_mobile() ) {
+							the_post_thumbnail('small', array (
+								'class'	=> 'alignright',
+							));
+						} else {
+							the_post_thumbnail('large', array (
+								'class'	=> 'alignright',
+							));
+						}
+                    } 
+                    ?>
 					<?php the_content(); ?>
 				</div>
 			<?php endwhile; ?>        

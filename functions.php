@@ -93,6 +93,17 @@ if ( function_exists( 'add_theme_support' ) ) {
         set_post_thumbnail_size( 150, 150 ); // default Post Thumbnail dimensions   
 }
 
+/**
+ * Remove pesky width and height attributes from thumbnails 
+ */
+ 
+add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
+
+function remove_width_attribute( $html ) {
+   $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+   return $html;
+}
 
 /**
  * Add "lead" class to first Paragraph

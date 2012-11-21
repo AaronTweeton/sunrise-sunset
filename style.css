@@ -14,9 +14,11 @@ License URI:
 
 .alignleft {
 	float:left;	
+	padding-right:20px;
 }
 .alignright {
 	float:right;	
+	padding-left:20px;
 }
 .aligncenter {
 	clear:both;	

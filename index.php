@@ -42,24 +42,24 @@ get_header() ?>
 					</small>
 				</h1>
                 <hr />
+            <div class="well">
 			<?php while ( have_posts() ) : the_post(); ?>
             	<article>
 					<?php echo get_the_post_thumbnail(); ?> 
 					<h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 					<?php the_excerpt(); ?>
 					<p><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="btn">Read More &raquo;</a></p>
-                   </article>
-                   <hr />
-			<?php endwhile; ?>
-						
-			<ul class="pager">
-				<li class="previous">
-					<?php previous_posts_link('&laquo; Previous Entries') ?>
-				</li>
-				<li class="next">
-					<?php next_posts_link('Next Entries &raquo;') ?>
-				</li>
-			</ul>
+				</article>
+                <hr />
+				<?php endwhile; ?>
+                <ul class="pager">
+                    <li class="previous">
+                        <?php previous_posts_link('&laquo; Previous Entries') ?>
+                    </li>
+                    <li class="next">
+                        <?php next_posts_link('Next Entries &raquo;') ?>
+                    </li>
+                </ul>
 			
 			<?php else : ?>
 			<?php endif; // end have_posts() check ?>

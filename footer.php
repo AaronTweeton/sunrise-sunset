@@ -3,16 +3,14 @@
  * The template for displaying the footer.
  *
  * @package WordPress
- * @subpackage Sunset
+ * @subpackage SunriseSunset
  * @since 1.0
  */
 ?>
     <hr>
-
     <footer>
         <p><small>&copy; <?php echo date('Y') . ' ' . get_bloginfo('name'); ?></small></p>
     </footer>
-
 </div><!-- /container -->
 
 <?php wp_footer(); ?>

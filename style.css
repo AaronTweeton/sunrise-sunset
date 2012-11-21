@@ -1,5 +1,5 @@
 /*
-Theme Name: Sunset
+Theme Name: Sunrise Sunset
 Theme URI: http://aarontweeton.com/
 Description: A theme custom-built for Coram Deo Presbyterian Church. Powered by Twitter Bootstrap.
 Author: aarontweeton
@@ -11,3 +11,82 @@ License:
 License URI:
 
 */
+
+.alignleft {
+	float:left;	
+}
+.alignright {
+	float:right;	
+}
+.aligncenter {
+	clear:both;	
+}
+
+body {
+	font-family:'Droid Serif', serif;
+	background-attachment:fixed;
+	background-color:#F0E9DF;
+	background-image:url('img/asphalt-bg.jpg');
+	background-position:center top;
+	background-repeat:repeat-x;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar,
+.btn {
+	font-family:'Days One', sans-serif;
+	font-weight:400;	
+}
+
+a {
+	color:#690;	
+}
+a:hover {
+	color:#76A910;	
+}
+.btn-primary {
+	background: #76a910;
+	background: -moz-linear-gradient(top,  #76a910 0%, #669900 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#76a910), color-stop(100%,#669900));
+	background: -webkit-linear-gradient(top,  #76a910 0%,#669900 100%);
+	background: -o-linear-gradient(top,  #76a910 0%,#669900 100%);
+	background: -ms-linear-gradient(top,  #76a910 0%,#669900 100%);
+	background: linear-gradient(to bottom,  #76a910 0%,#669900 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#76a910', endColorstr='#669900',GradientType=0 );
+}
+.btn-primary:hover {
+	background: #86b920;
+	background: -moz-linear-gradient(top,  #86b920 0%, #76a910 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#86b920), color-stop(100%,#76a910));
+	background: -webkit-linear-gradient(top,  #86b920 0%,#76a910 100%);
+	background: -o-linear-gradient(top,  #86b920 0%,#76a910 100%);
+	background: -ms-linear-gradient(top,  #86b920 0%,#76a910 100%);
+	background: linear-gradient(to bottom,  #86b920 0%,#76a910 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#86b920', endColorstr='#76a910',GradientType=0 );
+}
+
+.badge a,
+.badge a:hover,
+.label a,
+.label a:hover {
+	color:#FFF;	
+}
+
+.well {
+	overflow:auto; /* Fixes bug where floated objects overlap the well */
+  -moz-box-shadow:    0 2px 5px 0 rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
+  box-shadow:         0 2px 5px 0 rgba(0,0,0,0.1);
+}
+/* REPONSIVE */
+
+@media(min-width:979px) {
+	body {
+		padding-top:50px;	
+	}
+}

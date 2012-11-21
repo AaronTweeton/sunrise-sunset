@@ -77,6 +77,14 @@ register_sidebar(array(
 )); 
 
 /**
+ * Register Menus
+ */
+
+register_nav_menu( 'primary', 'Primary Menu' );
+
+
+
+/**
  * Thumbnails
  */
  
@@ -260,11 +268,13 @@ class description_walker extends Walker_Nav_Menu
  */
  
 function nav_fallback() {
+	echo '<ul class="nav">';
     wp_list_pages( array (
-		'title_li'	=>	'',
-		'depth'		=>	1,
-		'number'	=>	7
+		'title_li'		=>	'',
+		'depth'			=>	1,
+		'number'		=>	7,
 	));
+	echo '</ul>';
 }
 
 /**

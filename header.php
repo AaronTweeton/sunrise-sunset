@@ -36,11 +36,14 @@
 			<a class="brand" href="<?php echo home_url(); ?>"><?php echo bloginfo('name'); ?></a>
 			
 			<div class="nav-collapse collapse">
-				<ul class="nav">
-					<?php wp_nav_menu( array(
-						'fallback_cb'     => 'nav_fallback'			
-					)); ?>
-				</ul>
+				<?php wp_nav_menu( array(
+					'theme_location'	=> 'primary',
+					'fallback_cb'		=> 'nav_fallback',
+					'depth'				=>	1,
+					'container'			=>	FALSE,
+					'menu_class'		=>	'nav',
+				
+				)); ?>
 			</div>
 		</div>
 	</div>

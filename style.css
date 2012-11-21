@@ -76,6 +76,9 @@ a:hover {
 .label a:hover {
 	color:#FFF;	
 }
+.hero-unit {
+	background: #FFF;	
+}
 
 .hero-unit,
 .well {

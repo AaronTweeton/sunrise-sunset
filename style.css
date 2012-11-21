@@ -77,6 +77,7 @@ a:hover {
 	color:#FFF;	
 }
 
+.hero-unit,
 .well {
 	overflow:auto; /* Fixes bug where floated objects overlap the well */
   -moz-box-shadow:    0 2px 5px 0 rgba(0,0,0,0.1);
@@ -88,5 +89,12 @@ a:hover {
 @media(min-width:979px) {
 	body {
 		padding-top:50px;	
+	}
+	.hero-unit {
+	}
+}
+@media(max-width:767px) {
+	.hero-unit {
+		padding:29px;
 	}
 }

@@ -100,4 +100,7 @@ a:hover {
 	.hero-unit {
 		padding:29px;
 	}
+	.navbar .brand {
+		font-size:1.1em;	
+	}
 }

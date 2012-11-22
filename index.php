@@ -37,12 +37,11 @@ get_header() ?>
 						}
 					}
 					?>
-					<small>
-						<?php _e( 'archives ', 'sunset') ; ?>
-					</small>
-				</h1>
+						<small>
+							<?php _e( 'archives ', 'sunset') ; ?>
+						</small>
+					</h1>
                 <hr />
-            <div class="well">
 			<?php while ( have_posts() ) : the_post(); ?>
             	<article>
 					<?php echo get_the_post_thumbnail(); ?> 

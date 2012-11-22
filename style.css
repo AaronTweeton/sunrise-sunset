@@ -22,6 +22,8 @@ License URI:
 }
 .aligncenter {
 	clear:both;	
+	display:block;
+	margin:0 auto;
 }
 
 body {
@@ -38,14 +40,28 @@ h2,
 h3,
 h4,
 h5,
+h6 {
+	clear:both;	
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
 h6,
 .navbar,
-.btn {
+.badge,
+.btn,
+.pager,
+.pagination {
 	font-family:'Days One', sans-serif;
 	font-weight:400;	
 }
 
-a {
+a,
+.navbar-inverse .brand,
+.navbar-inverse .nav > li > a {
 	color:#690;	
 }
 a:hover {

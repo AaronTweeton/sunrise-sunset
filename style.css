@@ -41,9 +41,13 @@ h3,
 h4,
 h5,
 h6 {
-	clear:both;	
+	clear:left;	
 }
+.nav-collapse .nav > li > a,
+.nav-collapse .dropdown-menu a {
+	font-weight:400;	
 
+}
 h1,
 h2,
 h3,

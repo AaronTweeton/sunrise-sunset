@@ -4,7 +4,7 @@ Theme URI: http://aarontweeton.com/
 Description: A theme custom-built for Coram Deo Presbyterian Church. Powered by Twitter Bootstrap.
 Author: aarontweeton
 Author URI: http://www.aarontweeton.com/
-Version: 1.0
+Version: 1.1
 Tags: bootstrap
 
 License:
@@ -12,14 +12,6 @@ License URI:
 
 */
 
-.alignleft {
-	float:left;	
-	padding-right:20px;
-}
-.alignright {
-	float:right;	
-	padding-left:20px;
-}
 .aligncenter {
 	clear:both;	
 	display:block;
@@ -68,6 +60,11 @@ a,
 .navbar-inverse .nav > li > a {
 	color:#690;	
 }
+
+.admin-bar .navbar {
+	top:28px;	/* Drops navbar down below admin-bar when logged in */
+}
+
 a:hover {
 	color:#76A910;	
 }
@@ -109,6 +106,9 @@ a:hover {
   -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
   box-shadow:         0 2px 5px 0 rgba(0,0,0,0.1);
 }
+
+
+
 /* REPONSIVE */
 
 @media(min-width:979px) {

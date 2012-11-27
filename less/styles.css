@@ -1,0 +1,10 @@
+.alignleft {
+  float: left;
+  padding-right: 10px;
+}
+.alignright {
+  float: right;
+  padding-left: 10px;
+}
+
+/* This beautiful CSS-File has been crafted with LESS (lesscss.org) and compiled by simpLESS (wearekiss.com/simpless) */

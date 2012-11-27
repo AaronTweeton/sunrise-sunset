@@ -7,7 +7,8 @@
  * @since 1.0
  */
 ?>
-<div class="row secondary" id="secondary">
+</div><!-- /primary row-fluid -->
+<div class="row-fluid secondary" id="secondary">
 	<div class="span4">
 		<div class="well">
 			<?php dynamic_sidebar( 'secondary-left' ); ?>

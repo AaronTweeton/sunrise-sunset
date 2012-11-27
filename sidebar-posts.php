@@ -7,9 +7,9 @@
  * @since 1.0
  */
 ?>
+</div><!-- /primary row-fluid -->
 <div class="row secondary" id="secondary">    
 	<?php
-
 	$the_query = new WP_Query( array (
 		'posts_per_page'		=>	3,
 		'ignore_sticky_posts'	=>	1,

@@ -26,7 +26,7 @@ function theme_styles()
 	wp_enqueue_style( 'font-droidserif' );
 
 	/* Load Less styles */	
-	wp_register_style( 'less', get_template_directory_uri() . 'less/styles.css', array(), '1.0', 'all' );
+	wp_register_style( 'less', get_template_directory_uri() . '/less/styles.css', array(), '1.0', 'all' );
 	wp_enqueue_style( 'less' );
 	
 	/* Load WordPress styles */	

@@ -22,7 +22,7 @@
 	
 	<?php wp_head(); ?>    
 </head>
-<body <?php body_class($class); ?>>
+<body <?php body_class(); ?>>
 
 <div class="navbar navbar-inverse navbar-fixed-top access">
 	<div class="navbar-inner">

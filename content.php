@@ -1,4 +1,4 @@
-<article class="hentry">
+<article id="post-<?php the_ID(); ?>" <?php post_class('hentry'); ?>>
 	<header>
 		<hgroup>
 			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>

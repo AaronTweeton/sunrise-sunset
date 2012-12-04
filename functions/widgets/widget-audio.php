@@ -55,7 +55,7 @@ class SunriseSunset_Audio_Widget extends WP_Widget {
 		while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 			<h4><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
 			<p><?php the_date(); ?></p>
-			<a class="btn" ref="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php _e('Play Now','sunrisesunset')?> <i class="icon-play"></i></a>
+			<a class="btn" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php _e('Play Now','sunrisesunset')?> <i class="icon-play"></i></a>
 			<hr />
 		<?php
 		endwhile;

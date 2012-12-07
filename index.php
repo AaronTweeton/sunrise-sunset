@@ -17,29 +17,35 @@ get_header() ?>
 	<?php if ( have_posts() ) : ?>
 		<?php if (is_archive()) { ?>
 		<div class="well">
-			<h1>
 			<?php
-				if ( is_category() ) {
-					_e( single_cat_title() );
-				} elseif ( is_tag() ) {
-					_e( single_tag_title() );
-				} elseif ( is_author() ) {
-					the_author();
-				} elseif ( is_date() ) {
-					if ( is_year() ) {
-						echo get_the_date('Y');
-					} else if ( is_month() ) {
-						echo get_the_date('F Y');
-					} else if ( is_day() ) {
-						echo get_the_date('l, F Y');
-					}
-				}
+				if ( is_category() ) { ?>
+                	<h1>
+						<?php _e( single_cat_title() ); ?>
+                    </h1>
+					<?php _e( category_description() ); ?>
+				<?php } elseif ( is_tag() ) { ?>
+					<h1>
+						<?php _e( single_tag_title() ); ?>
+                    </h1>
+					<?php _e( tag_description() ); ?>
+				<?php } elseif ( is_author() ) { ?>
+					<h1>
+						<?php the_author(); ?>
+					</h1>
+                    <?php the_author_meta('description'); ?>
+				} elseif ( is_date() ) { ?>
+                	<h1>
+						<?php if ( is_year() ) {
+                            echo get_the_date('Y');
+                        } else if ( is_month() ) {
+                            echo get_the_date('F Y');
+                        } else if ( is_day() ) {
+                            echo get_the_date('l, F Y');
+                        } ?>
+                    </h1>
+			<?php }
 			}
 			?>
-				<small>
-					<?php _e( 'archives ', 'sunset') ; ?>
-				</small>
-			</h1>
 		<hr />
 	<?php while ( have_posts() ) : the_post(); ?>
 		<article>

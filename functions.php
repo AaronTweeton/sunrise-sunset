@@ -1,11 +1,16 @@
 <?php
 /**
- * Sunset functions and definitions
+ * SunriseSunset functions and definitions
  *
  * @package WordPress
  * @subpackage SunriseSunset
  * @since 1.0
  */
+
+/**
+ * Load includes in functions folder - so we keep functions.php nice and tidy
+ */
+require_once ('functions/register.php');	// Registration of sidebars and menus
 
 /**
  * Load CSS & JS
@@ -47,49 +52,6 @@ function theme_scripts()
     wp_enqueue_script( 'bootstrap' );
 }
 add_action('wp_enqueue_scripts', 'theme_scripts');
-
-
-
-
-/**
- * Register Sidebars
- */
-register_sidebar(array(
-	'name'			=> __( 'Secondary Left' ),
-	'id'			=> 'secondary-left',
-	'description'	=> __( 'Widgets in this area will be shown in the Secondary area on the left-hand side.' ),
-	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-	'after_widget'  => '</div>',
-	'before_title'	=> '<h2>',
-	'after_title'	=> '</h2>'
-	
-)); 
-register_sidebar(array(
-	'name'			=> __( 'Secondary Center' ),
-	'id'			=> 'secondary-center',
-	'description'	=> __( 'Widgets in this area will be shown in the Secondary area in the center.' ),
-	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-	'after_widget'  => '</div>',
-	'before_title'	=> '<h2>',
-	'after_title'	=> '</h2>'
-)); 
-register_sidebar(array(
-	'name'			=> __( 'Secondary Right' ),
-	'id'			=> 'secondary-right',
-	'description'	=> __( 'Widgets in this area will be shown in the Secondary area on the right-hand side.' ),
-	'before_widget' => '<div id="%1$s" class="widget %2$s">',
-	'after_widget'  => '</div>',
-	'before_title'	=> '<h2>',
-	'after_title'	=> '</h2>'
-)); 
-
-/**
- * Register Menus
- */
-
-register_nav_menu( 'primary', 'Primary Menu' );
-
-
 
 /**
  * Add support for Thumbnails & Post Formats

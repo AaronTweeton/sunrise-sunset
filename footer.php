@@ -9,7 +9,21 @@
 ?>
     <hr>
     <footer>
-        <p><small>&copy; <?php echo date('Y') . ' ' . get_bloginfo('name'); ?></small></p>
+    	<div class="row-fluid">
+        	<div class="span6">
+                <p><small>&copy; <?php echo date('Y') . ' ' . get_bloginfo('name'); ?></small></p>
+                <?php dynamic_sidebar( 'footer' ); ?>
+			</div>
+            <div class="span6">
+				<?php wp_nav_menu( array(
+                    'theme_location'	=> 'footer',
+                    'fallback_cb'		=> '',
+                    'depth'				=>	1,
+                    'container'			=>	FALSE,
+                    'menu_class'		=>	'nav nav-pills pull-right',
+                )); ?>
+			</div>
+		</div>
     </footer>
 </div><!-- /container -->
 

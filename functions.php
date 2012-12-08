@@ -24,12 +24,14 @@ function theme_styles()
 	wp_register_style( 'bootstrap-responsive', get_template_directory_uri() . '/css/bootstrap-responsive.min.css', array(), '2.2.1', 'all' );
 	wp_enqueue_style( 'bootstrap-responsive' );
 
-	/* Load Fonts */
-	wp_register_style( 'font-daysone', 'http://fonts.googleapis.com/css?family=Days+One', array(), '1.0', 'all' );
-	wp_enqueue_style( 'font-daysone' );
-	wp_register_style( 'font-droidserif', 'http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic', array(), '1.0', 'all' );
-	wp_enqueue_style( 'font-droidserif' );
-
+	/* Load Fonts, if not mobile */
+	if ( ! wp_is_mobile() ) {
+		wp_register_style( 'font-daysone', 'http://fonts.googleapis.com/css?family=Days+One', array(), '1.0', 'all' );
+		wp_enqueue_style( 'font-daysone' );
+		wp_register_style( 'font-droidserif', 'http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic', array(), '1.0', 'all' );
+		wp_enqueue_style( 'font-droidserif' );
+	}
+	
 	/* Load Less styles */	
 	wp_register_style( 'less', get_template_directory_uri() . '/less/styles.css', array(), '1.0', 'all' );
 	wp_enqueue_style( 'less' );

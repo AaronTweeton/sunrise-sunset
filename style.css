@@ -19,7 +19,7 @@ License URI:
 }
 
 body {
-	font-family:'Droid Serif', serif;
+	font-family:'Droid Serif', Georgia, serif;
 	background-attachment:fixed;
 	background-color:#F0E9DF;
 	background-image:url('img/asphalt-bg.jpg');

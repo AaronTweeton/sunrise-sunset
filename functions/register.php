@@ -39,13 +39,13 @@ register_sidebar(array(
 	'after_title'	=> '</h2>'
 )); 
 register_sidebar(array(
-	'name'			=> __( 'Footer' ),
-	'id'			=> 'footer',
+	'name'			=> __( 'Copyright' ),
+	'id'			=> 'copyright',
 	'description'	=> __( 'Widgets in this area will be shown in the Footer area at the very bottom.' ),
 	'before_widget' => '<div id="%1$s" class="widget %2$s">',
 	'after_widget'  => '</div>',
-	'before_title'	=> '<h2>',
-	'after_title'	=> '</h2>'
+	'before_title'	=> '<h4>',
+	'after_title'	=> '</h4>'
 )); 
 
 /**

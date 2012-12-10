@@ -12,7 +12,7 @@
     	<div class="row-fluid">
         	<div class="span6">
                 <p><small>&copy; <?php echo date('Y') . ' ' . get_bloginfo('name'); ?></small></p>
-                <?php dynamic_sidebar( 'footer' ); ?>
+                <?php dynamic_sidebar( 'copyright' ); ?>
 			</div>
             <div class="span6">
 				<?php wp_nav_menu( array(

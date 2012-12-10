@@ -41,6 +41,7 @@ class SunriseSunset_Quote_Widget extends WP_Widget {
 		// Start widget output	
 		// The Query
 		$args = array(
+			'posts_per_page' => 1,
 			'tax_query' => array(
 				array(
 					'taxonomy' => 'post_format',
@@ -53,8 +54,11 @@ class SunriseSunset_Quote_Widget extends WP_Widget {
 		
 		// The Loop
 		while ( $the_query->have_posts() ) : $the_query->the_post();
-			the_content();
-		endwhile;
+			// Strip out any footnote references which are located within []
+			$content = get_the_content();
+			echo preg_replace ('/\[.*\]/', '', $content); ?>
+			<a class="btn" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?> &raquo;</a>
+		<?php endwhile;
 		
 		// Reset Post Data
 		wp_reset_postdata();

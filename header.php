@@ -7,6 +7,8 @@
  * @package WordPress
  * @subpackage SunriseSunset
  * @since 1.0
+ * 
+ * @todo	Anchors dont work with navbar
  */
 ?>
 <!DOCTYPE html>
@@ -37,12 +39,12 @@
 			
 			<div class="nav-collapse collapse">
 				<?php wp_nav_menu( array(
-					'theme_location'	=> 'primary',
-					'fallback_cb'		=> 'nav_fallback',
-					'depth'				=>	1,
-					'container'			=>	FALSE,
-					'menu_class'		=>	'nav',
-				
+					'theme_location' => 'primary',
+					'fallback_cb'	 => 'nav_fallback',
+					'depth'			 =>	2,
+					'container'		 =>	FALSE,
+					'menu_class'	 =>	'nav',
+					'walker' 		 => new twitter_bootstrap_nav_walker()			
 				)); ?>
 			</div>
 		</div>

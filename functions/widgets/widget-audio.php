@@ -6,7 +6,7 @@
  * @subpackage SunriseSunset
  * @since 1.1
  * 
- * @todo
+ * @todo	Need to be able to make posts_per_page variable from admin
  */
  
 class SunriseSunset_Audio_Widget extends WP_Widget {
@@ -41,6 +41,7 @@ class SunriseSunset_Audio_Widget extends WP_Widget {
 		// Start widget output	
 		// The Query
 		$args = array(
+			'posts_per_page' => 1,
 			'tax_query' => array(
 				array(
 					'taxonomy' => 'post_format',

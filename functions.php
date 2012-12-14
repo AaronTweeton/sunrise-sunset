@@ -13,6 +13,10 @@
 require_once ('functions/register.php');	// Registration of sidebars and menus
 require_once ('functions/twitter_bootstrap_nav_walker.php');	// Register Custom Navigation Walker
 
+// Widgets
+require_once ('functions/widgets/widget-quote.php');
+require_once ('functions/widgets/widget-audio.php');
+
 /**
  * Load CSS & JS
  */
@@ -41,7 +45,7 @@ function theme_styles()
 	wp_register_style( 'style', get_template_directory_uri() . '/style.css', array(), '1.0', 'all' );
 	wp_enqueue_style( 'style' );
 }
-add_action('wp_enqueue_scripts', 'theme_styles');
+add_action( 'wp_enqueue_scripts', 'theme_styles' );
 
 function theme_scripts()  
 { 
@@ -54,7 +58,7 @@ function theme_scripts()
     wp_register_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', 'jquery', '2.2.1', 'true');
     wp_enqueue_script( 'bootstrap' );
 }
-add_action('wp_enqueue_scripts', 'theme_scripts');
+add_action( 'wp_enqueue_scripts', 'theme_scripts' );
 
 /**
  * Add support for Thumbnails & Post Formats
@@ -62,7 +66,7 @@ add_action('wp_enqueue_scripts', 'theme_scripts');
  
 if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails' );
-        set_post_thumbnail_size( 150, 150 ); // default Post Thumbnail dimensions   
+	set_post_thumbnail_size( 150, 150 ); // default Post Thumbnail dimensions   
 	add_theme_support( 'post-formats', array( 'aside', 'audio', 'quote' ) );
 }
 
@@ -179,8 +183,6 @@ function custom_wp_link_pages( $args = '' ) {
 	return $output;
 }
 
-
-	
 /**
  * Menu fallback
  */
@@ -188,9 +190,9 @@ function custom_wp_link_pages( $args = '' ) {
 function nav_fallback() {
 	echo '<ul class="nav">';
     wp_list_pages( array (
-		'title_li'		=>	'',
-		'depth'			=>	1,
-		'number'		=>	7,
+		'title_li' => '',
+		'depth'	   => 1,
+		'number'   => 7,
 	));
 	echo '</ul>';
 }
@@ -260,13 +262,5 @@ function replace_excerpt($content) {
 		$content
 	);
 }
-add_filter('the_excerpt', 'replace_excerpt');
-
-/**
- * Require includes
- */
-
-require_once('functions/widgets/widget-quote.php');
-require_once('functions/widgets/widget-audio.php');
-
+add_filter( 'the_excerpt', 'replace_excerpt' );
 ?>

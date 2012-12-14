@@ -6,7 +6,7 @@
  * @subpackage SunriseSunset
  * @since 1.1
  * 
- * @todo	Needs to filter out footnotes (i.e. anything within [] )
+ * @todo	Need to be able to make posts_per_page variable from admin
  */
  
 class SunriseSunset_Quote_Widget extends WP_Widget {
@@ -56,8 +56,8 @@ class SunriseSunset_Quote_Widget extends WP_Widget {
 		while ( $the_query->have_posts() ) : $the_query->the_post();
 			// Strip out any footnote references which are located within []
 			$content = get_the_content();
-			echo preg_replace ('/\[.*\]/', '', $content); ?>
-			<a class="btn" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?> &raquo;</a>
+			echo preg_replace ('/\[.*?\]/', '', $content); ?>
+			<a class="btn" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php _e( 'Read more', sunrisesunset ) ?> &raquo;</a>
 		<?php endwhile;
 		
 		// Reset Post Data
